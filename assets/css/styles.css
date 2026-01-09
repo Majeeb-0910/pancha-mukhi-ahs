@@ -1,0 +1,9 @@
+/* ! First import Bootstrap */
+@import url(bootstrap/bootstrap.min.css);
+
+/* ! Owl Carousel */
+@import url(owl-carousel/owl.carousel.min.css);
+@import url(owl-carousel/owl.theme.default.min.css);
+
+/* ! Then import custom styles */
+@import url(custom-styles.css);

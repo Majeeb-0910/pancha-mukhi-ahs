@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+
+.font_roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+.font_playfair {
+  font-family: "Playfair", serif;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #16223a;
+}
+
+p {
+  font-size: 18px;
+}
+
+/* ! Start Common CSS Styles */
+.primary_bg {
+  background-color: #16223a;
+}
+
+.primary_txt {
+  color: #16223a;
+}
+
+.secondary_bg {
+  background-color: #031929;
+  color: #93a2b8;
+}
+.secondary_bg_light {
+  background-color: #000034;
+}
+.secondary_txt {
+  color: #070912;
+}
+.golden_txt {
+  color: #f4c35b;
+}
+
+.golden_bg {
+  background-color: #f4c35b;
+  color: #031929;
+}
+
+.text_justify {
+  text-align: justify;
+}
+
+.btn_primary {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #e6bd55;
+  color: #070912;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Playfair", serif;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 5px #e6bd55;
+}
+
+.btn_primary:hover {
+  background-color: #c6891e;
+  color: #070912;
+  transform: translateY(-5px);
+  animation: btn_bg_pulse 1.25s infinite;
+  box-shadow: 0 0 10px #e6bd55;
+}
+
+.btn_whatsapp {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #008614;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Playfair", serif;
+  transition: all 0.3s ease-in-out;
+  animation: pulse 2s infinite;
+}
+.btn_whatsapp:hover {
+  box-shadow: 0 0 10px #008614;
+}
+
+@keyframes btn_bg_pulse {
+  0% {
+    -moz-box-shadow: 0 0 10px #e6bd55;
+    box-shadow: 0 0 10px #e6bd55;
+  }
+  25% {
+    -moz-box-shadow: 0 0 15px #e6bd55;
+    box-shadow: 0 0 15px #e6bd55;
+  }
+  50% {
+    -moz-box-shadow: 0 0 20px #e6bd55;
+    box-shadow: 0 0 20px #e6bd55;
+  }
+  75% {
+    -moz-box-shadow: 0 0 15px #e6bd55;
+    box-shadow: 0 0 15px #e6bd55;
+  }
+  100% {
+    -moz-box-shadow: 0 0 10px #e6bd55;
+    box-shadow: 0 0 10px #e6bd55;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -moz-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  100% {
+    -moz-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.heading_underline {
+  width: 150px;
+  height: 2.5px;
+  background-color: #f4c35b;
+}
+
+.heading_underline_center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.h_44 {
+  font-size: 2.75rem;
+}
+
+.fixed_btn_offset {
+  bottom: 15px;
+  right: 15px;
+  left: auto;
+}
+/* ! End Common CSS Styles */
+
+/* ! Start Home Page Styles */
+
+/* Circular Pulse Animation for About Section */
+.bg_aniamate {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg_aniamate::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.6);
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  /* border: 1px solid rgba(255, 255, 255, 0.6); */
+  transform: translate(-50%, -50%);
+  animation: circularPulse 5s ease infinite;
+  animation-delay: 1.5s;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes circularPulse {
+  0% {
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6),
+      0 0 0 40px rgba(255, 255, 255, 0.4), 0 0 0 80px rgba(255, 255, 255, 0.2),
+      0 0 0 120px rgba(255, 255, 255, 0.1);
+  }
+  20% {
+    width: 150px;
+    height: 150px;
+    opacity: 0.75;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5),
+      0 0 0 60px rgba(255, 255, 255, 0.35),
+      0 0 0 110px rgba(255, 255, 255, 0.15),
+      0 0 0 160px rgba(255, 255, 255, 0.05);
+  }
+  40% {
+    width: 250px;
+    height: 250px;
+    opacity: 0.5;
+    box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.4),
+      0 0 0 100px rgba(255, 255, 255, 0.2),
+      0 0 0 170px rgba(255, 255, 255, 0.08),
+      0 0 0 240px rgba(255, 255, 255, 0.02);
+  }
+  60% {
+    width: 350px;
+    height: 350px;
+    opacity: 0.25;
+    box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.25),
+      0 0 0 140px rgba(255, 255, 255, 0.1),
+      0 0 0 230px rgba(255, 255, 255, 0.03), 0 0 0 320px rgba(255, 255, 255, 0);
+  }
+  80% {
+    width: 430px;
+    height: 430px;
+    opacity: 0.08;
+    box-shadow: 0 0 0 65px rgba(255, 255, 255, 0.12),
+      0 0 0 160px rgba(255, 255, 255, 0.05),
+      0 0 0 255px rgba(255, 255, 255, 0.01), 0 0 0 350px rgba(255, 255, 255, 0);
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+    box-shadow: 0 0 0 80px rgba(255, 255, 255, 0.1),
+      0 0 0 180px rgba(255, 255, 255, 0.03),
+      0 0 0 280px rgba(255, 255, 255, 0.01), 0 0 0 380px rgba(255, 255, 255, 0);
+  }
+}
+
+.logo_container {
+  width: 280px;
+  height: auto;
+}
+
+.nav_icon_img_color {
+  filter: brightness(0) saturate(100%) invert(79%) sepia(43%) saturate(747%)
+    hue-rotate(2deg) brightness(95%) contrast(92%);
+}
+
+.nav_btn_border {
+  border: 2px solid #e6bd55;
+  border-radius: 5px;
+}
+
+.nav_hover_effect:hover {
+  color: #e6bd55;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar_link_active {
+  color: #e6bd55;
+}
+
+.navbar_link_active:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #c6891e;
+  margin-top: 2px;
+}
+
+.sticky_top {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.relative_position {
+  position: relative;
+  z-index: 0;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.lh_2_5 {
+  line-height: 2.5;
+}
+
+/* ! Sticky Navbar Styles */
+.navbar {
+  transition: position 0.3s ease;
+}
+
+body.navbar-fixed {
+  padding-top: 56px;
+}
+/* ! End Sticky Navbar Styles */
+
+/* ! End Home Page Styles */
+
+/*! Card Btns */
+
+/* Card body centering and alignment */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+/* Card button styles adapted from index3.html, applied when adding `card_btn` to anchors.
+   Keep `.btn_primary` sizing intact; `.card_btn` augments visuals and animations. */
+.card_btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+  background: rgba(255, 255, 255, 0.051);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(250, 52, 52, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 10;
+  border-radius: inherit;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.5s;
+  animation: btn_bg_pulse 1s infinite;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+}
+
+/* .card_btn:hover {
+  letter-spacing: 3px;
+} */
+
+/* sheen highlight */
+.card_btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.149), transparent);
+  transform: skewX(45deg);
+  transition: all 0.5s;
+  transition-delay: 0.5s;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.card_btn:hover::before {
+  transform: skewX(45deg) translateX(200%);
+  transition-delay: 0s;
+}
+
+/*! End Card Btns */
+
+/* ! rating_sapacing */
+/* ! endrating_sapacing */
+
+.rating_sapacing {
+  letter-spacing: -0.3rem;
+}
+
+/* footer_media_icons */
+.footer_media_icons {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+}
