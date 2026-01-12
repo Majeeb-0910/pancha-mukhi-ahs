@@ -1,0 +1,26 @@
+/* ! First import Bootstrap */
+@import url(bootstrap/bootstrap.min.css);
+
+/* ! Then Utils */
+/* ! Like: Owl Carousel */
+@import url(owl-carousel/owl.carousel.min.css);
+@import url(owl-carousel/owl.theme.default.min.css);
+
+/* ! last import custom styles */
+@import url(custom-styles.css);
+
+/* Scrollbar */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #c6891e;
+  outline: 1px solid #c6891e;
+
+  border-radius: 8px;
+}
