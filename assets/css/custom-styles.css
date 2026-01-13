@@ -575,22 +575,6 @@ body.navbar-fixed {
 
 /* ! Start Contact Page Overrides */
 
-/* Hero Section */
-.hero-contact {
-  width: 100%;
-  background: linear-gradient(135deg, #c6891e 0%, #f4c35b 100%);
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.hero-title {
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
-  color: #000;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin: 0;
-}
-
 /* CTA Card */
 .cta-card {
   background: rgba(15, 15, 15, 0.6);
