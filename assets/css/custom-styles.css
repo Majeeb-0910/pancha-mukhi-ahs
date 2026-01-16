@@ -640,6 +640,14 @@ body.navbar-fixed {
 
 /* ! Responsive Design */
 @media (max-width: 768px) {
+  .fixed_left_btn_offset {
+    left: 20px;
+  }
+
+  .fixed_right_btn_offset {
+    right: 20px;
+  }
+
   .hero-contact {
     padding: 50px 20px;
   }
@@ -667,6 +675,13 @@ body.navbar-fixed {
 }
 
 @media (max-width: 576px) {
+  .fixed_left_btn_offset {
+    left: 15px;
+  }
+  .fixed_right_btn_offset {
+    right: 15px;
+  }
+
   .hero-title {
     font-size: 1.8rem;
   }
